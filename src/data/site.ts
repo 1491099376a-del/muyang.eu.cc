@@ -46,9 +46,16 @@ export const site = {
   projects: {
     eyebrow: "Projects",
     heading: "从问题出发，持续探索。",
-    description: "以下是准备探索的项目方向，尚无公开成果。",
+    description: "记录正在实践的小工具，以及持续探索的项目方向。",
     linkLabel: "查看项目",
     items: [
+      {
+        title: "练记 · 健身训练记录",
+        description: "记录健身房训练的动作、重量与次数，查看历史。数据保存在当前浏览器，暂不支持跨设备同步。",
+        status: "Prototype",
+        tags: ["健身", "AI 编程", "本地存储"],
+        url: "https://muyang.eu.cc/gym.html",
+      },
       {
         title: "Amazon 运营与自动化",
         description: "探索将重复的运营工作整理为清晰、可复用的流程。",

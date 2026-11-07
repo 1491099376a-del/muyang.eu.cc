@@ -51,6 +51,30 @@ export const site = {
     linkLabel: "查看项目",
     items: [
       {
+        title: "一件代发订单处理助手",
+        slug: "dropship-order-assistant",
+        description: "串联订单导出、文件预检、模板生成和独立校验的 Windows 本地工具；报价比较模块仍在验证。",
+        status: "Prototype",
+        tags: ["Python", "Playwright", "pywinauto", "Excel"],
+        url: "",
+      },
+      {
+        title: "运营日报自动更新流程",
+        slug: "daily-report-automation",
+        description: "将浏览器数据导出、Excel 清洗校验与在线表格更新串成可追溯的本地自动化流程。",
+        status: "Building",
+        tags: ["Python", "Playwright", "WPS AirScript"],
+        url: "",
+      },
+      {
+        title: "Amazon 竞品数据跟踪",
+        slug: "amazon-competitor-tracker",
+        description: "按产品标识整理公开页面的数据，并根据工作簿表头和日期更新价格与排名记录。",
+        status: "Prototype",
+        tags: ["Python", "Excel", "数据校验"],
+        url: "",
+      },
+      {
         title: "练记 · 健身训练记录",
         slug: "gym-training-log",
         description: "记录健身房训练的动作、重量与次数，查看历史。数据保存在当前浏览器，暂不支持跨设备同步。",

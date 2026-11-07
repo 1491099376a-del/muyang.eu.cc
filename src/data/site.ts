@@ -2,6 +2,7 @@ export type ProjectStatus = "Building" | "Prototype" | "Exploring";
 
 export type Project = {
   title: string;
+  slug?: string;
   description: string;
   status: ProjectStatus;
   tags: string[];
@@ -28,7 +29,7 @@ export const site = {
   language: "zh-CN",
   navigation: [
     { label: "介绍", href: "#about" },
-    { label: "项目", href: "#projects" },
+    { label: "项目", href: "projects" },
     { label: "学习", href: "#learning" },
     { label: "笔记", href: "#notes" },
     { label: "联系", href: "#contact" },
@@ -50,7 +51,32 @@ export const site = {
     linkLabel: "查看项目",
     items: [
       {
+        title: "日报自动化",
+        slug: "daily-report-automation",
+        description: "把日常数据导出、清洗校验和在线表格更新连成可追溯的本地工作流。",
+        status: "Building",
+        tags: ["Python", "Playwright", "Excel"],
+        url: "",
+      },
+      {
+        title: "WPS AirScript 表格自动写入",
+        slug: "wps-airscript-automation",
+        description: "通过脚本将处理后的数据写入指定在线表格，并检查写入结果。",
+        status: "Building",
+        tags: ["WPS AirScript", "JavaScript", "数据校验"],
+        url: "",
+      },
+      {
+        title: "宠物推车素材与说明书优化",
+        slug: "pet-stroller-content",
+        description: "探索宠物推车的视觉素材、A+ 排版、关键词整理与英文说明书优化工作流。",
+        status: "Prototype",
+        tags: ["产品内容", "AI 辅助设计", "英文文案"],
+        url: "",
+      },
+      {
         title: "练记 · 健身训练记录",
+        slug: "gym-training-log",
         description: "记录健身房训练的动作、重量与次数，查看历史。数据保存在当前浏览器，暂不支持跨设备同步。",
         status: "Prototype",
         tags: ["健身", "AI 编程", "本地存储"],

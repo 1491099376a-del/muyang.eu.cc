@@ -38,17 +38,19 @@ export default function Home() {
         <div className="project-grid grid gap-5 md:grid-cols-3">
           {site.projects.items.map((project) => {
             const href = externalUrl(project.url);
+            const detailUrl = project.slug ? `/projects/${project.slug}` : undefined;
             return (
               <article key={project.title} className="project-card">
                 <span className={`status status-${project.status.toLowerCase()}`} lang="en">{project.status}</span>
                 <h3>{project.title}</h3>
                 <p>{project.description}</p>
                 <ul aria-label="项目主题" className="tags">{project.tags.map((tag) => <li key={tag}>{tag}</li>)}</ul>
-                {href && <a href={href} className="text-link" target="_blank" rel="noopener noreferrer">{site.projects.linkLabel}<span className="sr-only">（在新标签页打开）</span></a>}
+                {detailUrl ? <Link href={detailUrl} className="text-link">{site.projects.linkLabel}</Link> : href ? <a href={href} className="text-link" target="_blank" rel="noopener noreferrer">{site.projects.linkLabel}<span className="sr-only">（在新标签页打开）</span></a> : null}
               </article>
             );
           })}
         </div>
+        <p className="projects-all-link"><Link href="/projects" className="text-link">浏览全部项目与探索方向</Link></p>
       </section>
 
       <section id="learning" aria-label={site.learning.eyebrow} className="section learning-section">

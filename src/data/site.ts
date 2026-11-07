@@ -2,6 +2,7 @@ export type ProjectStatus = "Building" | "Prototype" | "Exploring";
 
 export type Project = {
   title: string;
+  slug?: string;
   description: string;
   status: ProjectStatus;
   tags: string[];
@@ -28,7 +29,7 @@ export const site = {
   language: "zh-CN",
   navigation: [
     { label: "介绍", href: "#about" },
-    { label: "项目", href: "#projects" },
+    { label: "项目", href: "projects" },
     { label: "学习", href: "#learning" },
     { label: "笔记", href: "#notes" },
     { label: "联系", href: "#contact" },
@@ -51,6 +52,7 @@ export const site = {
     items: [
       {
         title: "练记 · 健身训练记录",
+        slug: "gym-training-log",
         description: "记录健身房训练的动作、重量与次数，查看历史。数据保存在当前浏览器，暂不支持跨设备同步。",
         status: "Prototype",
         tags: ["健身", "AI 编程", "本地存储"],
